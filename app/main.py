@@ -17,13 +17,11 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from processing import (
     load_raster_band,
-    load_multiband_raster,
     calculate_slavi,
     load_vector_data,
     calculate_zonal_statistics,
     reproject_vector_to_raster_crs,
     save_slavi_raster,
-    get_raster_info,
     validate_inputs,
     process_slavi_analysis
 )
@@ -52,19 +50,19 @@ st.markdown("""
         margin-bottom: 2rem;
     }
     .info-box {
-        background-color: #e8f5e9;
+        background-color: #12100b;
         padding: 1rem;
         border-radius: 0.5rem;
         border-left: 4px solid #2e7d32;
     }
     .warning-box {
-        background-color: #fff3e0;
+        background-color: #12100b;
         padding: 1rem;
         border-radius: 0.5rem;
         border-left: 4px solid #ff9800;
     }
     .stMetric {
-        background-color: #f5f5f5;
+        background-color: #12100b;
         padding: 1rem;
         border-radius: 0.5rem;
     }
@@ -167,94 +165,50 @@ def main():
             st.sidebar.warning("No GeoJSON files in the data/ folder")
     
     else:
-        input_mode = st.sidebar.radio(
-            "Raster data loading mode:",
-            ["Separate files (NIR, Red, SWIR)", "Multiband raster"],
-            help="Choose the method of loading raster data"
+        st.sidebar.subheader("Raster data")
+        
+        nir_file = st.sidebar.file_uploader(
+            "NIR band (GeoTIFF)",
+            type=['tif', 'tiff', 'jp2'],
+            key='nir',
+            help="Upload a GeoTIFF file with the NIR band"
+        )
+        red_file = st.sidebar.file_uploader(
+            "Red band (GeoTIFF)",
+            type=['tif', 'tiff', 'jp2'],
+            key='red',
+            help="Upload a GeoTIFF file with the Red band"
+        )
+        swir_file = st.sidebar.file_uploader(
+            "SWIR band (GeoTIFF)",
+            type=['tif', 'tiff', 'jp2'],
+            key='swir',
+            help="Upload a GeoTIFF file with the SWIR band"
         )
         
-        st.sidebar.subheader("🗺️ Raster data")
-        
-        if input_mode == "Separate files (NIR, Red, SWIR)":
-            nir_file = st.sidebar.file_uploader(
-                "NIR band (GeoTIFF)",
-                type=['tif', 'tiff', 'jp2'],
-                key='nir',
-                help="Upload a GeoTIFF file with the NIR band"
-            )
-            red_file = st.sidebar.file_uploader(
-                "Red band (GeoTIFF)",
-                type=['tif', 'tiff', 'jp2'],
-                key='red',
-                help="Upload a GeoTIFF file with the Red band"
-            )
-            swir_file = st.sidebar.file_uploader(
-                "SWIR band (GeoTIFF)",
-                type=['tif', 'tiff', 'jp2'],
-                key='swir',
-                help="Upload a GeoTIFF file with the SWIR band"
-            )
-            
-            if nir_file and red_file and swir_file:
-                try:
-                    with tempfile.TemporaryDirectory() as tmpdir:
-                        nir_path = os.path.join(tmpdir, "nir.tif")
-                        red_path = os.path.join(tmpdir, "red.tif")
-                        swir_path = os.path.join(tmpdir, "swir.tif")
-                        
-                        with open(nir_path, 'wb') as f:
-                            f.write(nir_file.getvalue())
-                        with open(red_path, 'wb') as f:
-                            f.write(red_file.getvalue())
-                        with open(swir_path, 'wb') as f:
-                            f.write(swir_file.getvalue())
-                        
-                        nir_data, nir_profile = load_raster_band(nir_path)
-                        red_data, red_profile = load_raster_band(red_path)
-                        swir_data, swir_profile = load_raster_band(swir_path)
-                        raster_profile = nir_profile
-                        
-                        st.sidebar.success("Raster data loaded!")
-                        
-                except Exception as e:
-                    st.sidebar.error(f"Error loading raster data: {str(e)}")
-        
-        else:
-            multi_file = st.sidebar.file_uploader(
-                "Multiband raster (GeoTIFF)",
-                type=['tif', 'tiff'],
-                key='multi',
-                help="Upload a multiband GeoTIFF file"
-            )
-            
-            if multi_file:
-                try:
-                    with tempfile.NamedTemporaryFile(suffix='.tif', delete=False) as tmp:
-                        tmp.write(multi_file.getvalue())
-                        tmp_path = tmp.name
+        if nir_file and red_file and swir_file:
+            try:
+                with tempfile.TemporaryDirectory() as tmpdir:
+                    nir_path = os.path.join(tmpdir, "nir.tif")
+                    red_path = os.path.join(tmpdir, "red.tif")
+                    swir_path = os.path.join(tmpdir, "swir.tif")
                     
-                    info = get_raster_info(tmp_path)
-                    st.sidebar.info(f"Number of bands: {info['count']}")
+                    with open(nir_path, 'wb') as f:
+                        f.write(nir_file.getvalue())
+                    with open(red_path, 'wb') as f:
+                        f.write(red_file.getvalue())
+                    with open(swir_path, 'wb') as f:
+                        f.write(swir_file.getvalue())
                     
-                    col1, col2, col3 = st.sidebar.columns(3)
-                    with col1:
-                        nir_band = st.number_input("NIR", min_value=1, max_value=info['count'], value=min(4, info['count']), key='nir_band')
-                    with col2:
-                        red_band = st.number_input("Red", min_value=1, max_value=info['count'], value=min(3, info['count']), key='red_band')
-                    with col3:
-                        swir_band = st.number_input("SWIR", min_value=1, max_value=info['count'], value=min(5, info['count']), key='swir_band')
+                    nir_data, nir_profile = load_raster_band(nir_path)
+                    red_data, red_profile = load_raster_band(red_path)
+                    swir_data, swir_profile = load_raster_band(swir_path)
+                    raster_profile = nir_profile
                     
-                    bands = load_multiband_raster(tmp_path, nir_band, red_band, swir_band)
-                    nir_data = bands.nir
-                    red_data = bands.red
-                    swir_data = bands.swir
-                    raster_profile = bands.profile
-                    
-                    os.unlink(tmp_path)
                     st.sidebar.success("Raster data loaded!")
                     
-                except Exception as e:
-                    st.sidebar.error(f"Error loading raster data: {str(e)}")
+            except Exception as e:
+                st.sidebar.error(f"Error loading raster data: {str(e)}")
         
         st.sidebar.subheader("Vector data")
         vector_file = st.sidebar.file_uploader(

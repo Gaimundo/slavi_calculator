@@ -98,3 +98,47 @@ Plik GeoJSON z poligonami reprezentującymi obszary do analizy zonalnej.
 | > 2.0 | Bardzo gęsta roślinność / las |
 
 *Wartości mogą się różnić w zależności od typu roślinności i warunków atmosferycznych.*
+
+## Przedstawienie aplikacji
+
+### Strona główna
+
+![main_page.png](img\main_page.png)
+
+### Panel boczny
+
+Wariant dla plików lokalnych:
+
+![local_files_menu.png](img\local_files_menu.png)
+
+Wariant dla przesyłu plików:
+
+![manual_upload_menu.png](img\manual_upload_menu.png)
+
+### Strona wynikowa
+
+Obliczone wartości:
+
+![calculated_slavi_values.png](img\calculated_slavi_values.png)
+
+Wygenerowana mapa dla przesłanych plików:
+
+![slavi_map.png](img\slavi_map.png)
+
+Histogram rozkładu wartości indeksu:
+
+![slavi_histogram.png](img\slavi_histogram.png)
+
+Wykres obliczonych wartości średnich z podziałem na obszary:
+
+![slavi_values_chart.png](img\slavi_values_chart.png)
+
+Statystyki obliczone dla każdego z obszaru:
+
+![zonal-statistics.png](img\zonal-statistics.png)
+
+Dostepne opcje eksportu danych:
+
+![export_options.png](img\export_options.png)
+
+Przykładowa mapa interaktywna dostępna jest w pliku [slavi_interactive_map.html](img\slavi_interactive_map.html)

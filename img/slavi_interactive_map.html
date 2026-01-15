@@ -1,0 +1,1573 @@
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_fd30a0dcfca36110a383202c5017f637 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_div {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_fd30a0dcfca36110a383202c5017f637&quot; &gt;&lt;/div&gt;
+        
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_div&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_fd30a0dcfca36110a383202c5017f637 = L.map(
+                &quot;map_fd30a0dcfca36110a383202c5017f637&quot;,
+                {
+                    center: [42.34098951170185, -1.758437228546877],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d758b7135d4fffe45f8c03113e06e74b = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_d758b7135d4fffe45f8c03113e06e74b.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            var tile_layer_639b9d506267a619e7634e50ae6eb1e6 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_639b9d506267a619e7634e50ae6eb1e6.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            var tile_layer_ac855e01696fcefd730bc153c12d650c = L.tileLayer(
+                &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
+                {&quot;attribution&quot;: &quot;Esri&quot;, &quot;detectRetina&quot;: false, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_ac855e01696fcefd730bc153c12d650c.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            var feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5 = L.featureGroup(
+                {}
+            );
+        
+    
+        function geo_json_152fc5f6d647ba1c72de88294d94f320_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#016a38&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_152fc5f6d647ba1c72de88294d94f320_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_152fc5f6d647ba1c72de88294d94f320 = L.geoJson(null, {
+                onEachFeature: geo_json_152fc5f6d647ba1c72de88294d94f320_onEachFeature,
+            
+                style: geo_json_152fc5f6d647ba1c72de88294d94f320_styler,
+        });
+
+        function geo_json_152fc5f6d647ba1c72de88294d94f320_add (data) {
+            geo_json_152fc5f6d647ba1c72de88294d94f320
+                .addData(data);
+        }
+            geo_json_152fc5f6d647ba1c72de88294d94f320_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7637829802944385, 42.33459467132107], [-1.7669110208761138, 42.335464509901], [-1.767827750160799, 42.33415207770474], [-1.7729055807815222, 42.33583995338555], [-1.7719968752809079, 42.33674415830703], [-1.7730302966880314, 42.3375135937042], [-1.7730034580060692, 42.33889393046468], [-1.7669782243165157, 42.338732061183435], [-1.7632206476537666, 42.33921661310978], [-1.7625588609107492, 42.33687602386184], [-1.7637829802944385, 42.33459467132107]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_152fc5f6d647ba1c72de88294d94f320.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 0&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.5299&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5672191381454468&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.7568753957748413&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.153817944547642
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_152fc5f6d647ba1c72de88294d94f320.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_2cc48b32555856f390a89741d873fb80_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#a70226&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_2cc48b32555856f390a89741d873fb80_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2cc48b32555856f390a89741d873fb80 = L.geoJson(null, {
+                onEachFeature: geo_json_2cc48b32555856f390a89741d873fb80_onEachFeature,
+            
+                style: geo_json_2cc48b32555856f390a89741d873fb80_styler,
+        });
+
+        function geo_json_2cc48b32555856f390a89741d873fb80_add (data) {
+            geo_json_2cc48b32555856f390a89741d873fb80
+                .addData(data);
+        }
+            geo_json_2cc48b32555856f390a89741d873fb80_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7624297470354344, 42.33677740318792], [-1.7575087629660542, 42.33645194238601], [-1.757876778204425, 42.33373357301523], [-1.7636326170542402, 42.33424303245928], [-1.7624297470354344, 42.33677740318792]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_2cc48b32555856f390a89741d873fb80.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 1&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4603&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.44226527214050293&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.5244161486625671&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.01113299769354645
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_2cc48b32555856f390a89741d873fb80.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_98d11d83b84b7ebe31951ea4fb7c7c19_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#036e3a&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_98d11d83b84b7ebe31951ea4fb7c7c19_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_98d11d83b84b7ebe31951ea4fb7c7c19 = L.geoJson(null, {
+                onEachFeature: geo_json_98d11d83b84b7ebe31951ea4fb7c7c19_onEachFeature,
+            
+                style: geo_json_98d11d83b84b7ebe31951ea4fb7c7c19_styler,
+        });
+
+        function geo_json_98d11d83b84b7ebe31951ea4fb7c7c19_add (data) {
+            geo_json_98d11d83b84b7ebe31951ea4fb7c7c19
+                .addData(data);
+        }
+            geo_json_98d11d83b84b7ebe31951ea4fb7c7c19_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.763081619838823, 42.339623466587156], [-1.7666295816926867, 42.33913666447946], [-1.7684122819534478, 42.33911693797217], [-1.7691711681451097, 42.34186688885225], [-1.7634923572315602, 42.34273915999242], [-1.763081619838823, 42.339623466587156]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_98d11d83b84b7ebe31951ea4fb7c7c19.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 2&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.5201&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.9091086983680725&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.6458560228347778&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.11241192204562547
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_98d11d83b84b7ebe31951ea4fb7c7c19.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_e3d31204fd3a873bccb7e5a4eac6d29d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#af0926&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_e3d31204fd3a873bccb7e5a4eac6d29d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e3d31204fd3a873bccb7e5a4eac6d29d = L.geoJson(null, {
+                onEachFeature: geo_json_e3d31204fd3a873bccb7e5a4eac6d29d_onEachFeature,
+            
+                style: geo_json_e3d31204fd3a873bccb7e5a4eac6d29d_styler,
+        });
+
+        function geo_json_e3d31204fd3a873bccb7e5a4eac6d29d_add (data) {
+            geo_json_e3d31204fd3a873bccb7e5a4eac6d29d
+                .addData(data);
+        }
+            geo_json_e3d31204fd3a873bccb7e5a4eac6d29d_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7631004035601945, 42.34267659577576], [-1.757108110699148, 42.34348683141619], [-1.7564071265866905, 42.34048464056985], [-1.762767920141523, 42.33958119088954], [-1.7631004035601945, 42.34267659577576]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_e3d31204fd3a873bccb7e5a4eac6d29d.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 3&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4752&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4474361836910248&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.5873731970787048&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.017636575004224497
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_e3d31204fd3a873bccb7e5a4eac6d29d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_7bc83932568efea687268a4a5ac9d395_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#138c4a&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_7bc83932568efea687268a4a5ac9d395_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7bc83932568efea687268a4a5ac9d395 = L.geoJson(null, {
+                onEachFeature: geo_json_7bc83932568efea687268a4a5ac9d395_onEachFeature,
+            
+                style: geo_json_7bc83932568efea687268a4a5ac9d395_styler,
+        });
+
+        function geo_json_7bc83932568efea687268a4a5ac9d395_add (data) {
+            geo_json_7bc83932568efea687268a4a5ac9d395
+                .addData(data);
+        }
+            geo_json_7bc83932568efea687268a4a5ac9d395_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7568976908624758, 42.3435234407897], [-1.7505630142616242, 42.34440740224109], [-1.7500716283493214, 42.34407147458242], [-1.7512589354813572, 42.341031488603214], [-1.7562502770025115, 42.340463493699716], [-1.7568976908624758, 42.3435234407897]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_7bc83932568efea687268a4a5ac9d395.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 4&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.4533&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.6849023103713989&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.76951003074646&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.1740111366089771
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_7bc83932568efea687268a4a5ac9d395.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_bd4eca491d1de96623904e3cc745c242_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#a90426&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_bd4eca491d1de96623904e3cc745c242_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bd4eca491d1de96623904e3cc745c242 = L.geoJson(null, {
+                onEachFeature: geo_json_bd4eca491d1de96623904e3cc745c242_onEachFeature,
+            
+                style: geo_json_bd4eca491d1de96623904e3cc745c242_styler,
+        });
+
+        function geo_json_bd4eca491d1de96623904e3cc745c242_add (data) {
+            geo_json_bd4eca491d1de96623904e3cc745c242
+                .addData(data);
+        }
+            geo_json_bd4eca491d1de96623904e3cc745c242_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7638114681682693, 42.33447830600781], [-1.7647689072840897, 42.33242741114624], [-1.7680274888754939, 42.333318071148895], [-1.7669140596960446, 42.33530897927825], [-1.7638114681682693, 42.33447830600781]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_bd4eca491d1de96623904e3cc745c242.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 5&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4651&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4446946978569031&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.5554817318916321&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.014020405462401048
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_bd4eca491d1de96623904e3cc745c242.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_b1b71c1d259c5e01858a7c4ce878efb3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#e5f49b&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_b1b71c1d259c5e01858a7c4ce878efb3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b1b71c1d259c5e01858a7c4ce878efb3 = L.geoJson(null, {
+                onEachFeature: geo_json_b1b71c1d259c5e01858a7c4ce878efb3_onEachFeature,
+            
+                style: geo_json_b1b71c1d259c5e01858a7c4ce878efb3_styler,
+        });
+
+        function geo_json_b1b71c1d259c5e01858a7c4ce878efb3_add (data) {
+            geo_json_b1b71c1d259c5e01858a7c4ce878efb3
+                .addData(data);
+        }
+            geo_json_b1b71c1d259c5e01858a7c4ce878efb3_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7625905838886222, 42.339268150649], [-1.7517094313778419, 42.34078360456346], [-1.751615609022333, 42.3362518065215], [-1.7623226433815593, 42.336892919440785], [-1.7625905838886222, 42.339268150649]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_b1b71c1d259c5e01858a7c4ce878efb3.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 6&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.0689&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5798467397689819&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.3326376676559448&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.17593161302664448
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_b1b71c1d259c5e01858a7c4ce878efb3.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_7fa81466dd25592e1efbea42b6fbf9fc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#006837&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_7fa81466dd25592e1efbea42b6fbf9fc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7fa81466dd25592e1efbea42b6fbf9fc = L.geoJson(null, {
+                onEachFeature: geo_json_7fa81466dd25592e1efbea42b6fbf9fc_onEachFeature,
+            
+                style: geo_json_7fa81466dd25592e1efbea42b6fbf9fc_styler,
+        });
+
+        function geo_json_7fa81466dd25592e1efbea42b6fbf9fc_add (data) {
+            geo_json_7fa81466dd25592e1efbea42b6fbf9fc
+                .addData(data);
+        }
+            geo_json_7fa81466dd25592e1efbea42b6fbf9fc_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7515256079198205, 42.34080104830107], [-1.744298977975231, 42.341733283831886], [-1.7440615131199149, 42.337861051440974], [-1.7457069719697553, 42.338151300752266], [-1.7511667271104117, 42.33774421342195], [-1.7515256079198205, 42.34080104830107]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_7fa81466dd25592e1efbea42b6fbf9fc.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 7&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.5370&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.9152287840843201&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.7535265684127808&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.06417640058644537
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_7fa81466dd25592e1efbea42b6fbf9fc.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_307e473a8d5acd5ba274723d68ba259d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#0d8044&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_307e473a8d5acd5ba274723d68ba259d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_307e473a8d5acd5ba274723d68ba259d = L.geoJson(null, {
+                onEachFeature: geo_json_307e473a8d5acd5ba274723d68ba259d_onEachFeature,
+            
+                style: geo_json_307e473a8d5acd5ba274723d68ba259d_styler,
+        });
+
+        function geo_json_307e473a8d5acd5ba274723d68ba259d_add (data) {
+            geo_json_307e473a8d5acd5ba274723d68ba259d
+                .addData(data);
+        }
+            geo_json_307e473a8d5acd5ba274723d68ba259d_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.751185407792523, 42.337462458675574], [-1.7461071843544507, 42.33779593883387], [-1.7471458286711952, 42.33432656760444], [-1.7515290371616399, 42.33466606353131], [-1.751185407792523, 42.337462458675574]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_307e473a8d5acd5ba274723d68ba259d.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 8&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.4814&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 1.0569263696670532&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.6527355909347534&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.09391684262833987
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_307e473a8d5acd5ba274723d68ba259d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_7da3f6dbec2b3585b502815d89aa9a6b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#fdc776&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_7da3f6dbec2b3585b502815d89aa9a6b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7da3f6dbec2b3585b502815d89aa9a6b = L.geoJson(null, {
+                onEachFeature: geo_json_7da3f6dbec2b3585b502815d89aa9a6b_onEachFeature,
+            
+                style: geo_json_7da3f6dbec2b3585b502815d89aa9a6b_styler,
+        });
+
+        function geo_json_7da3f6dbec2b3585b502815d89aa9a6b_add (data) {
+            geo_json_7da3f6dbec2b3585b502815d89aa9a6b
+                .addData(data);
+        }
+            geo_json_7da3f6dbec2b3585b502815d89aa9a6b_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7574596089719108, 42.336286123743086], [-1.7515695474137332, 42.335930455849926], [-1.7518174045735884, 42.333337192956044], [-1.7577189881516575, 42.333761031509624], [-1.7574596089719108, 42.336286123743086]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_7da3f6dbec2b3585b502815d89aa9a6b.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 9&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.8340&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5357488989830017&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.1406630277633667&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.13326393392119049
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_7da3f6dbec2b3585b502815d89aa9a6b.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_ff55add812600a7532b0e982df4f208d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#a50026&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_ff55add812600a7532b0e982df4f208d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ff55add812600a7532b0e982df4f208d = L.geoJson(null, {
+                onEachFeature: geo_json_ff55add812600a7532b0e982df4f208d_onEachFeature,
+            
+                style: geo_json_ff55add812600a7532b0e982df4f208d_styler,
+        });
+
+        function geo_json_ff55add812600a7532b0e982df4f208d_add (data) {
+            geo_json_ff55add812600a7532b0e982df4f208d
+                .addData(data);
+        }
+            geo_json_ff55add812600a7532b0e982df4f208d_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7562356241379409, 42.343866276916216], [-1.7593364478255933, 42.34347207673146], [-1.7602115771666553, 42.34962628146413], [-1.757060334558854, 42.34990328547903], [-1.7562356241379409, 42.343866276916216]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_ff55add812600a7532b0e982df4f208d.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 10&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4537&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4382673501968384&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.558223307132721&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.01052547535220664
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_ff55add812600a7532b0e982df4f208d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#7fc866&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99 = L.geoJson(null, {
+                onEachFeature: geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99_onEachFeature,
+            
+                style: geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99_styler,
+        });
+
+        function geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99_add (data) {
+            geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99
+                .addData(data);
+        }
+            geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7595195127466972, 42.34349350304231], [-1.7632515449672665, 42.34298935250181], [-1.763702151934949, 42.346747170946934], [-1.759948277484807, 42.34701775465569], [-1.7595195127466972, 42.34349350304231]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 11&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.2755&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.68487948179245&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.4957027435302734&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.13574241738699136
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_790970a257c3d4a70c02ccac2c1ff621_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#eb5a3a&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_790970a257c3d4a70c02ccac2c1ff621_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_790970a257c3d4a70c02ccac2c1ff621 = L.geoJson(null, {
+                onEachFeature: geo_json_790970a257c3d4a70c02ccac2c1ff621_onEachFeature,
+            
+                style: geo_json_790970a257c3d4a70c02ccac2c1ff621_styler,
+        });
+
+        function geo_json_790970a257c3d4a70c02ccac2c1ff621_add (data) {
+            geo_json_790970a257c3d4a70c02ccac2c1ff621
+                .addData(data);
+        }
+            geo_json_790970a257c3d4a70c02ccac2c1ff621_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7571636398992865, 42.34998218688402], [-1.7602945939524586, 42.34965391657422], [-1.7599296860991964, 42.34704672161667], [-1.7637293313601319, 42.346781493444], [-1.7642603316598853, 42.35045267021216], [-1.7573936303005402, 42.35369388109574], [-1.7571636398992865, 42.34998218688402]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_790970a257c3d4a70c02ccac2c1ff621.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 12&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.6397&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5018171668052673&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.8247566223144531&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.044904532811332644
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_790970a257c3d4a70c02ccac2c1ff621.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#af0926&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f = L.geoJson(null, {
+                onEachFeature: geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f_onEachFeature,
+            
+                style: geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f_styler,
+        });
+
+        function geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f_add (data) {
+            geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f
+                .addData(data);
+        }
+            geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7558544830611158, 42.344003120357605], [-1.7560797543945634, 42.345872320783386], [-1.7528161663437902, 42.346536896982926], [-1.7527244031515425, 42.34587475615826], [-1.7517542841029556, 42.34456135781124], [-1.7558544830611158, 42.344003120357605]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 13&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4777&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4361037611961365&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.7837713360786438&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.0392068206586887
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+        function geo_json_a1a5da13e903648368aace510eee97a6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#fdad60&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_a1a5da13e903648368aace510eee97a6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a1a5da13e903648368aace510eee97a6 = L.geoJson(null, {
+                onEachFeature: geo_json_a1a5da13e903648368aace510eee97a6_onEachFeature,
+            
+                style: geo_json_a1a5da13e903648368aace510eee97a6_styler,
+        });
+
+        function geo_json_a1a5da13e903648368aace510eee97a6_add (data) {
+            geo_json_a1a5da13e903648368aace510eee97a6
+                .addData(data);
+        }
+            geo_json_a1a5da13e903648368aace510eee97a6_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7528998048880777, 42.34661558830035], [-1.7561896039393052, 42.34595129410762], [-1.7571526622309284, 42.351620339161265], [-1.7540784027902252, 42.35197587678982], [-1.7550749229920692, 42.3493032434458], [-1.7528998048880777, 42.34661558830035]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_a1a5da13e903648368aace510eee97a6.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 14&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.7770&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4843977689743042&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.9617533087730408&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.09471359115786059
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_a1a5da13e903648368aace510eee97a6.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            var layer_control_a42e692e388eef6f014162d705fef67d_layers = {
+                base_layers : {
+                    &quot;openstreetmap&quot; : tile_layer_639b9d506267a619e7634e50ae6eb1e6,
+                    &quot;Esri Satellite&quot; : tile_layer_ac855e01696fcefd730bc153c12d650c,
+                },
+                overlays :  {
+                    &quot;SLAVI Index&quot; : feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5,
+                },
+            };
+            let layer_control_a42e692e388eef6f014162d705fef67d = L.control.layers(
+                layer_control_a42e692e388eef6f014162d705fef67d_layers.base_layers,
+                layer_control_a42e692e388eef6f014162d705fef67d_layers.overlays,
+                {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
+            ).addTo(map_fd30a0dcfca36110a383202c5017f637);
+
+        
+    
+            tile_layer_d758b7135d4fffe45f8c03113e06e74b.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            tile_layer_639b9d506267a619e7634e50ae6eb1e6.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            tile_layer_ac855e01696fcefd730bc153c12d650c.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            geo_json_152fc5f6d647ba1c72de88294d94f320.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_2cc48b32555856f390a89741d873fb80.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_98d11d83b84b7ebe31951ea4fb7c7c19.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_e3d31204fd3a873bccb7e5a4eac6d29d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_7bc83932568efea687268a4a5ac9d395.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_bd4eca491d1de96623904e3cc745c242.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_b1b71c1d259c5e01858a7c4ce878efb3.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_7fa81466dd25592e1efbea42b6fbf9fc.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_307e473a8d5acd5ba274723d68ba259d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_7da3f6dbec2b3585b502815d89aa9a6b.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_ff55add812600a7532b0e982df4f208d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_790970a257c3d4a70c02ccac2c1ff621.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_a1a5da13e903648368aace510eee97a6.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            var map_div = L.map(
+                &quot;map_div&quot;,
+                {
+                    center: [42.34098951170185, -1.758437228546877],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_div_0 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_d758b7135d4fffe45f8c03113e06e74b.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            tile_layer_div_0.addTo(map_div);
+        
+    
+            var tile_layer_div_1 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_639b9d506267a619e7634e50ae6eb1e6.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            tile_layer_div_1.addTo(map_div);
+        
+    
+            var tile_layer_div_2 = L.tileLayer(
+                &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
+                {&quot;attribution&quot;: &quot;Esri&quot;, &quot;detectRetina&quot;: false, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_ac855e01696fcefd730bc153c12d650c.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            tile_layer_div_2.addTo(map_div);
+        
+    
+            var feature_group_div_3 = L.featureGroup(
+                {}
+            );
+        
+    
+        function geo_json_div_3_0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#016a38&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_0 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_0_onEachFeature,
+            
+                style: geo_json_div_3_0_styler,
+        });
+
+        function geo_json_div_3_0_add (data) {
+            geo_json_div_3_0
+                .addData(data);
+        }
+            geo_json_div_3_0_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7637829802944385, 42.33459467132107], [-1.7669110208761138, 42.335464509901], [-1.767827750160799, 42.33415207770474], [-1.7729055807815222, 42.33583995338555], [-1.7719968752809079, 42.33674415830703], [-1.7730302966880314, 42.3375135937042], [-1.7730034580060692, 42.33889393046468], [-1.7669782243165157, 42.338732061183435], [-1.7632206476537666, 42.33921661310978], [-1.7625588609107492, 42.33687602386184], [-1.7637829802944385, 42.33459467132107]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_0.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 0&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.5299&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5672191381454468&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.7568753957748413&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.153817944547642
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_152fc5f6d647ba1c72de88294d94f320.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_0.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#a70226&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_1 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_1_onEachFeature,
+            
+                style: geo_json_div_3_1_styler,
+        });
+
+        function geo_json_div_3_1_add (data) {
+            geo_json_div_3_1
+                .addData(data);
+        }
+            geo_json_div_3_1_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7624297470354344, 42.33677740318792], [-1.7575087629660542, 42.33645194238601], [-1.757876778204425, 42.33373357301523], [-1.7636326170542402, 42.33424303245928], [-1.7624297470354344, 42.33677740318792]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_1.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 1&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4603&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.44226527214050293&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.5244161486625671&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.01113299769354645
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_2cc48b32555856f390a89741d873fb80.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_1.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#036e3a&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_2 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_2_onEachFeature,
+            
+                style: geo_json_div_3_2_styler,
+        });
+
+        function geo_json_div_3_2_add (data) {
+            geo_json_div_3_2
+                .addData(data);
+        }
+            geo_json_div_3_2_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.763081619838823, 42.339623466587156], [-1.7666295816926867, 42.33913666447946], [-1.7684122819534478, 42.33911693797217], [-1.7691711681451097, 42.34186688885225], [-1.7634923572315602, 42.34273915999242], [-1.763081619838823, 42.339623466587156]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_2.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 2&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.5201&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.9091086983680725&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.6458560228347778&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.11241192204562547
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_98d11d83b84b7ebe31951ea4fb7c7c19.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_2.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#af0926&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_3 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_3_onEachFeature,
+            
+                style: geo_json_div_3_3_styler,
+        });
+
+        function geo_json_div_3_3_add (data) {
+            geo_json_div_3_3
+                .addData(data);
+        }
+            geo_json_div_3_3_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7631004035601945, 42.34267659577576], [-1.757108110699148, 42.34348683141619], [-1.7564071265866905, 42.34048464056985], [-1.762767920141523, 42.33958119088954], [-1.7631004035601945, 42.34267659577576]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_3.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 3&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4752&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4474361836910248&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.5873731970787048&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.017636575004224497
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_e3d31204fd3a873bccb7e5a4eac6d29d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_3.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#138c4a&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_4 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_4_onEachFeature,
+            
+                style: geo_json_div_3_4_styler,
+        });
+
+        function geo_json_div_3_4_add (data) {
+            geo_json_div_3_4
+                .addData(data);
+        }
+            geo_json_div_3_4_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7568976908624758, 42.3435234407897], [-1.7505630142616242, 42.34440740224109], [-1.7500716283493214, 42.34407147458242], [-1.7512589354813572, 42.341031488603214], [-1.7562502770025115, 42.340463493699716], [-1.7568976908624758, 42.3435234407897]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_4.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 4&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.4533&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.6849023103713989&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.76951003074646&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.1740111366089771
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_7bc83932568efea687268a4a5ac9d395.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_4.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#a90426&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_5 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_5_onEachFeature,
+            
+                style: geo_json_div_3_5_styler,
+        });
+
+        function geo_json_div_3_5_add (data) {
+            geo_json_div_3_5
+                .addData(data);
+        }
+            geo_json_div_3_5_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7638114681682693, 42.33447830600781], [-1.7647689072840897, 42.33242741114624], [-1.7680274888754939, 42.333318071148895], [-1.7669140596960446, 42.33530897927825], [-1.7638114681682693, 42.33447830600781]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_5.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 5&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4651&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4446946978569031&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.5554817318916321&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.014020405462401048
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_bd4eca491d1de96623904e3cc745c242.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_5.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#e5f49b&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_6 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_6_onEachFeature,
+            
+                style: geo_json_div_3_6_styler,
+        });
+
+        function geo_json_div_3_6_add (data) {
+            geo_json_div_3_6
+                .addData(data);
+        }
+            geo_json_div_3_6_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7625905838886222, 42.339268150649], [-1.7517094313778419, 42.34078360456346], [-1.751615609022333, 42.3362518065215], [-1.7623226433815593, 42.336892919440785], [-1.7625905838886222, 42.339268150649]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_6.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 6&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.0689&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5798467397689819&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.3326376676559448&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.17593161302664448
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_b1b71c1d259c5e01858a7c4ce878efb3.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_6.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#006837&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_7 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_7_onEachFeature,
+            
+                style: geo_json_div_3_7_styler,
+        });
+
+        function geo_json_div_3_7_add (data) {
+            geo_json_div_3_7
+                .addData(data);
+        }
+            geo_json_div_3_7_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7515256079198205, 42.34080104830107], [-1.744298977975231, 42.341733283831886], [-1.7440615131199149, 42.337861051440974], [-1.7457069719697553, 42.338151300752266], [-1.7511667271104117, 42.33774421342195], [-1.7515256079198205, 42.34080104830107]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_7.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 7&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.5370&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.9152287840843201&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.7535265684127808&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.06417640058644537
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_7fa81466dd25592e1efbea42b6fbf9fc.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_7.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#0d8044&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_8 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_8_onEachFeature,
+            
+                style: geo_json_div_3_8_styler,
+        });
+
+        function geo_json_div_3_8_add (data) {
+            geo_json_div_3_8
+                .addData(data);
+        }
+            geo_json_div_3_8_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.751185407792523, 42.337462458675574], [-1.7461071843544507, 42.33779593883387], [-1.7471458286711952, 42.33432656760444], [-1.7515290371616399, 42.33466606353131], [-1.751185407792523, 42.337462458675574]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_8.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 8&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.4814&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 1.0569263696670532&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.6527355909347534&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.09391684262833987
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_307e473a8d5acd5ba274723d68ba259d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_8.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#fdc776&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_9 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_9_onEachFeature,
+            
+                style: geo_json_div_3_9_styler,
+        });
+
+        function geo_json_div_3_9_add (data) {
+            geo_json_div_3_9
+                .addData(data);
+        }
+            geo_json_div_3_9_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7574596089719108, 42.336286123743086], [-1.7515695474137332, 42.335930455849926], [-1.7518174045735884, 42.333337192956044], [-1.7577189881516575, 42.333761031509624], [-1.7574596089719108, 42.336286123743086]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_9.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 9&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.8340&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5357488989830017&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.1406630277633667&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.13326393392119049
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_7da3f6dbec2b3585b502815d89aa9a6b.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_9.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_10_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#a50026&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_10_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_10 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_10_onEachFeature,
+            
+                style: geo_json_div_3_10_styler,
+        });
+
+        function geo_json_div_3_10_add (data) {
+            geo_json_div_3_10
+                .addData(data);
+        }
+            geo_json_div_3_10_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7562356241379409, 42.343866276916216], [-1.7593364478255933, 42.34347207673146], [-1.7602115771666553, 42.34962628146413], [-1.757060334558854, 42.34990328547903], [-1.7562356241379409, 42.343866276916216]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_10.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 10&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4537&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4382673501968384&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.558223307132721&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.01052547535220664
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_ff55add812600a7532b0e982df4f208d.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_10.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_11_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#7fc866&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_11_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_11 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_11_onEachFeature,
+            
+                style: geo_json_div_3_11_styler,
+        });
+
+        function geo_json_div_3_11_add (data) {
+            geo_json_div_3_11
+                .addData(data);
+        }
+            geo_json_div_3_11_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7595195127466972, 42.34349350304231], [-1.7632515449672665, 42.34298935250181], [-1.763702151934949, 42.346747170946934], [-1.759948277484807, 42.34701775465569], [-1.7595195127466972, 42.34349350304231]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_11.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 11&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 1.2755&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.68487948179245&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 1.4957027435302734&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.13574241738699136
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_b1e8a678e8cd30ee2ad84ec06c9a4c99.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_11.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_12_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#eb5a3a&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_12_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_12 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_12_onEachFeature,
+            
+                style: geo_json_div_3_12_styler,
+        });
+
+        function geo_json_div_3_12_add (data) {
+            geo_json_div_3_12
+                .addData(data);
+        }
+            geo_json_div_3_12_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7571636398992865, 42.34998218688402], [-1.7602945939524586, 42.34965391657422], [-1.7599296860991964, 42.34704672161667], [-1.7637293313601319, 42.346781493444], [-1.7642603316598853, 42.35045267021216], [-1.7573936303005402, 42.35369388109574], [-1.7571636398992865, 42.34998218688402]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_12.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 12&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.6397&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.5018171668052673&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.8247566223144531&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.044904532811332644
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_790970a257c3d4a70c02ccac2c1ff621.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_12.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_13_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#af0926&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_13_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_13 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_13_onEachFeature,
+            
+                style: geo_json_div_3_13_styler,
+        });
+
+        function geo_json_div_3_13_add (data) {
+            geo_json_div_3_13
+                .addData(data);
+        }
+            geo_json_div_3_13_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7558544830611158, 42.344003120357605], [-1.7560797543945634, 42.345872320783386], [-1.7528161663437902, 42.346536896982926], [-1.7527244031515425, 42.34587475615826], [-1.7517542841029556, 42.34456135781124], [-1.7558544830611158, 42.344003120357605]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_13.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 13&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.4777&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4361037611961365&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.7837713360786438&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.0392068206586887
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_0a06f2c90e2e3aabcb278085b9d7ab7f.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_13.addTo(feature_group_div_3);
+        
+    
+        function geo_json_div_3_14_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;black&quot;, &quot;fillColor&quot;: &quot;#fdad60&quot;, &quot;fillOpacity&quot;: 0.6, &quot;weight&quot;: 2};
+            }
+        }
+
+        function geo_json_div_3_14_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_div_3_14 = L.geoJson(null, {
+                onEachFeature: geo_json_div_3_14_onEachFeature,
+            
+                style: geo_json_div_3_14_styler,
+        });
+
+        function geo_json_div_3_14_add (data) {
+            geo_json_div_3_14
+                .addData(data);
+        }
+            geo_json_div_3_14_add({&quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-1.7528998048880777, 42.34661558830035], [-1.7561896039393052, 42.34595129410762], [-1.7571526622309284, 42.351620339161265], [-1.7540784027902252, 42.35197587678982], [-1.7550749229920692, 42.3493032434458], [-1.7528998048880777, 42.34661558830035]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+            geo_json_div_3_14.bindTooltip(
+                `&lt;div&gt;
+                     
+                        &lt;b&gt;Obszar:&lt;/b&gt; 14&lt;br&gt;
+                        &lt;b&gt;Średnia SLAVI:&lt;/b&gt; 0.7770&lt;br&gt;
+                        &lt;b&gt;Min:&lt;/b&gt; 0.4843977689743042&lt;br&gt;
+                        &lt;b&gt;Max:&lt;/b&gt; 0.9617533087730408&lt;br&gt;
+                        &lt;b&gt;Odch. std.:&lt;/b&gt; 0.09471359115786059
+                        
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            geo_json_a1a5da13e903648368aace510eee97a6.addTo(feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5);
+        
+    
+            geo_json_div_3_14.addTo(feature_group_div_3);
+        
+    
+            feature_group_fb4cafc3bdbc7f30feeb7f3dada17fc5.addTo(map_fd30a0dcfca36110a383202c5017f637);
+        
+    
+            feature_group_div_3.addTo(map_div);
+        
+    
+            var layer_control_div_4_layers = {
+                base_layers : {
+                    &quot;openstreetmap&quot; : tile_layer_div_1,
+                    &quot;Esri Satellite&quot; : tile_layer_div_2,
+                },
+                overlays :  {
+                    &quot;SLAVI Index&quot; : feature_group_div_3,
+                },
+            };
+            let layer_control_div_4 = L.control.layers(
+                layer_control_div_4_layers.base_layers,
+                layer_control_div_4_layers.overlays,
+                {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
+            ).addTo(map_div);
+
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
